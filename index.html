@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片轉Base64</title>
+</head>
+<body>
+    
+    <h1>圖片轉Base64c</h1>
+    <input type="file" onchange="convertToBase64(this.files[0])">
+
+    <script>
+    function convertToBase64(file) {
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            console.log(reader.result); // 輸出 base64 編碼字串
+        }
+        reader.readAsDataURL(file);
+    }
+    </script>
+</body>
+</html>
